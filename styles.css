@@ -197,3 +197,6 @@ footer{
   border-top:1px solid var(--line); padding:1.6rem 0 calc(1.6rem + env(safe-area-inset-bottom,0px));
   text-align:center; font-size:.8rem; color:var(--ink-soft);
 }
+/* Centrar la última tarjeta cuando hay tres servicios */
+.grid > .card:last-child:nth-child(odd){grid-column:1 / -1; width:calc((100% - 1rem)/2); justify-self:center;}
+@media (max-width:640px){.grid > .card:last-child:nth-child(odd){grid-column:auto;width:100%;}}
