@@ -186,6 +186,19 @@ section{ padding:2.6rem 0; }
   animation-delay:.3s;
 }
 
+
+.enlace-servicio {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.enlace-servicio:hover h3 {
+  color: #F2735C;
+}
+
+
 @keyframes heroEntrada{
   to{
     opacity:1;
