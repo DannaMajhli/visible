@@ -1,139 +1,142 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700;900&family=Nunito:wght@400;600;700;800&display=swap');
+/* PRECIOS Y PAQUETES NFC */
 
-:root {
-  --cream: #07111F;
-  --panel: #0D1B2A;
-  --ink: #F4F7FA;
-  --ink-soft: #AAB7C5;
-  --coral: #F2735C;
-  --coral-deep: #FF8068;
-  --line: #20344A;
+html {
+  scroll-behavior: smooth;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at 20% 10%, rgba(242,115,92,.10), transparent 30%),
-    radial-gradient(circle at 80% 30%, rgba(80,140,255,.08), transparent 30%),
-    var(--cream);
-  color: var(--ink);
-  font-family: 'Nunito', sans-serif;
-}
-
-.detalle-servicio {
-  max-width: 1050px;
-  margin: 55px auto;
-  padding: 0 22px;
-}
-
-.volver {
-  display: inline-block;
-  margin-bottom: 30px;
-  color: var(--coral-deep);
-  text-decoration: none;
-  font-weight: 800;
-}
-
-.volver:hover {
-  color: var(--ink);
-}
-
-.detalle-servicio h1,
-.informacion-nfc h2 {
-  font-family: 'Fraunces', serif;
-  color: var(--ink);
-}
-
-.detalle-servicio h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 15px;
-}
-
-.descripcion {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  max-width: 750px;
-  margin-bottom: 35px;
-  color: var(--ink-soft);
-}
-
-.contenido-nfc {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-  align-items: center;
-}
-
-.imagen-nfc {
-  display: block;
-  width: 100%;
-  border-radius: 14px;
+.paquetes-nfc {
+  margin-top: 45px;
+  padding: 35px;
   background: var(--panel);
-}
-
-.informacion-nfc {
-  background: var(--panel);
-  padding: 30px;
-  border-radius: 14px;
   border: 1px solid var(--line);
+  border-radius: 14px;
+  scroll-margin-top: 25px;
 }
 
-.informacion-nfc h2 {
-  margin: 0 0 18px;
+.etiqueta-paquetes {
+  color: var(--coral-deep);
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
-.informacion-nfc ul {
-  padding-left: 20px;
-  line-height: 2;
-  margin-bottom: 22px;
+.paquetes-nfc h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin: 12px 0;
+  color: var(--ink);
 }
 
-.informacion-nfc li,
-.informacion-nfc p {
+.descripcion-paquetes {
   color: var(--ink-soft);
   line-height: 1.7;
+  margin-bottom: 28px;
 }
 
-.precio-nfc {
-  font-family: 'Fraunces', serif;
-  font-size: 1.7rem;
-  font-weight: 700;
-  margin: 20px 0;
-  color: var(--coral-deep) !important;
+.tabla-contenedor {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
 }
 
-.boton-nfc {
-  display: inline-block;
-  background: var(--coral);
-  color: #fff;
-  padding: 14px 22px;
-  border-radius: 11px;
-  text-decoration: none;
+.tabla-precios {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tabla-precios th {
+  background: var(--cream);
+  color: var(--ink-soft);
+  font-size: .9rem;
   font-weight: 800;
-  transition: transform .3s ease, box-shadow .3s ease;
+  padding: 18px 12px;
 }
 
-.boton-nfc:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(242,115,92,.35);
+.tabla-precios td {
+  padding: 20px 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.05rem;
+  font-weight: 700;
 }
+
+.tabla-precios th:first-child,
+.tabla-precios td:first-child {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.tabla-precios tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-precios tbody tr:hover {
+  background: rgba(255, 255, 255, .03);
+}
+
+.ahorro {
+  color: var(--coral-deep);
+  font-weight: 800;
+}
+
+.mejor-ahorro {
+  background: rgba(242, 115, 92, .08);
+}
+
+.nota-precios {
+  font-size: .85rem;
+  color: var(--ink-soft);
+  margin-top: 12px;
+}
+
+.beneficios-paquetes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 25px;
+  margin: 25px 0;
+}
+
+.beneficios-paquetes span {
+  color: var(--ink);
+  font-size: .95rem;
+  font-weight: 700;
+}
+
+.cotizacion-paquetes {
+  color: var(--ink-soft);
+  font-size: .9rem;
+  line-height: 1.7;
+  margin-top: 18px;
+}
+
+/* PAQUETES EN CELULARES */
 
 @media (max-width: 700px) {
-  .detalle-servicio {
-    margin: 30px auto;
+
+  .paquetes-nfc {
+    margin-top: 30px;
+    padding: 20px;
   }
 
-  .contenido-nfc {
-    grid-template-columns: 1fr;
+  .tabla-precios th,
+  .tabla-precios td {
+    padding: 14px 8px;
+    font-size: .85rem;
   }
 
-  .informacion-nfc {
-    padding: 22px;
+  .tabla-precios th:first-child,
+  .tabla-precios td:first-child {
+    padding-left: 10px;
   }
+
+  .beneficios-paquetes {
+    flex-direction: column;
+  }
+
+  .paquetes-nfc .boton-nfc {
+    display: block;
+    text-align: center;
+  }
+
 }
